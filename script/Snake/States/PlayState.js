@@ -37,6 +37,7 @@
 		this.create = function() {
 			this.cursors = this.phaser.input.keyboard.createCursorKeys();
 			this.score = 0;
+			this.point = null;
 			this.addPoint();
 			this.player = [];
 			for(var i = 0; i < 4; i++) {
