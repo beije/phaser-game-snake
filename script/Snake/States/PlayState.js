@@ -53,13 +53,13 @@
 		this.addPoint = function() {
 			var widthPoints = this.phaser.width/16;
 			var heightPoints = this.phaser.height/16;
-			var x = Math.round(Math.random()*widthPoints)*16;
-			var y = Math.round(Math.random()*heightPoints)*16;
+			var x = Math.round(Math.random()*(widthPoints-1))*16;
+			var y = Math.round(Math.random()*(heightPoints-1))*16;
 			if(!this.point) {
 				this.point = this.phaser.add.sprite(this.phaser.world.centerX, this.phaser.world.centerY, 'point');
 			}
-            this.point.x = x;
-            this.point.y = y;
+			this.point.x = x;
+			this.point.y = y;
 		}
 		this.updateScore = function() {
 			this.scoreText.setText('SCORE: ' + this.score);
