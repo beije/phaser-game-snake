@@ -22,9 +22,16 @@
 		};
 
 		this.create = function() {
-			var gameover = this.phaser.add.sprite(this.phaser.world.centerX, this.phaser.world.centerY, 'gameover');
-            gameover.anchor.setTo(0.5, 0.5);
-
+			var playButton = this.game.add.button(
+				this.phaser.world.centerX, 
+				this.phaser.world.centerY,
+				'gameover',
+				function() {
+					this.game.state.start("PlayState");
+				},
+				this
+			);
+			playButton.anchor.setTo(0.5,0.5);
 		};
 
 		this.initialize(phaser);
