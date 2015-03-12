@@ -38,7 +38,9 @@
 			this.cursors = this.phaser.input.keyboard.createCursorKeys();
             this.addPoint();
 			this.player = [];
-			this.increaseLength();
+			for(var i = 0; i < 4; i++) {
+				this.increaseLength();
+			}
 
 			var style = {
 				font: "16px Arial",
