@@ -36,8 +36,8 @@
 		}
 		this.create = function() {
 			this.cursors = this.phaser.input.keyboard.createCursorKeys();
-            this.addPoint();
 			this.score = 0;
+			this.addPoint();
 			this.player = [];
 			for(var i = 0; i < 4; i++) {
 				this.increaseLength();
@@ -76,10 +76,10 @@
 			}
 			var ball = this.phaser.add.sprite(this.phaser.world.centerX, this.phaser.world.centerY, 'playerball');
 
-            ball.x = x;
-            ball.y = y;
-            this.phaser.physics.arcade.enable(ball);
-            this.player.push(ball);
+			ball.x = x;
+			ball.y = y;
+			this.phaser.physics.arcade.enable(ball);
+			this.player.push(ball);
 		}
 
 		this.updateMovementPosition = function() {
