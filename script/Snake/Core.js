@@ -21,6 +21,14 @@
 				'Snake'
 			);
 
+			/* Bug in phaser, can't use create to set background color*/
+			setTimeout(
+				function() {
+					this.phaser.stage.backgroundColor = '#777964';
+				}.bind(this),
+				100
+			);
+
 			this.loadStates();
 		}
 

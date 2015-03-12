@@ -45,7 +45,7 @@
 
 			var style = {
 				font: "16px Arial",
-				fill: "#fff",
+				fill: "#000",
 				align: "center"
 			};
 
