@@ -22,6 +22,9 @@
 		this.create = function() {
 
 		}
+		this.update = function() {
+
+		}
 
 		this.initialize(phaser);
 	};
