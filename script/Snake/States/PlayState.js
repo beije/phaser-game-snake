@@ -75,11 +75,9 @@
 				x = this.player[this.player.length-1].x + 16;
 				y = this.player[this.player.length-1].y + 16;
 			}
-			var ball = this.phaser.add.sprite(this.phaser.world.centerX, this.phaser.world.centerY, 'playerball');
-
-			ball.x = x;
-			ball.y = y;
+			var ball = this.phaser.add.sprite(x, y, 'playerball');
 			this.phaser.physics.arcade.enable(ball);
+			
 			this.player.push(ball);
 		}
 
@@ -88,19 +86,19 @@
 				if(this.currentMovement != this.movement.DOWN) {
 					this.currentMovement = this.movement.UP;
 				}
-			} 
+			}
 
 			if (this.cursors.right.isDown) {
 				if(this.currentMovement != this.movement.LEFT) {
 					this.currentMovement = this.movement.RIGHT;
 				}
-			} 
+			}
 
 			if (this.cursors.down.isDown) {
 				if(this.currentMovement != this.movement.UP) {
 					this.currentMovement = this.movement.DOWN;
 				}
-			} 
+			}
 
 			if (this.cursors.left.isDown){
 				if(this.currentMovement != this.movement.RIGHT) {
@@ -187,7 +185,7 @@
 				case this.movement.LEFT:
 					this.player[0].x -= this.speed;
 				break;
-			}	
+			}
 
 			if(this.checkOutOfBoundry()) {
 				this.game.state.start("EndState");
